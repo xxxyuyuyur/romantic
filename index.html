@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Romantic — цветы с доставкой по Москве</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Авторские букеты, розы, цветы в корзинах и коробках. Заказ напрямую в WhatsApp или Telegram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf7f4; --card:#fff; --ink:#2a2124; --muted:#8c7f83; --line:#eee3df;
+  --accent:#b85c74; --accent-2:#e9b8c3; --soft:#f7e9ec; --gold:#b08d57; --r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 Manrope,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+/* hero */
+.hero{position:relative;padding:28px 0 22px;text-align:center}
+.logo{width:88px;height:88px;border-radius:50%;margin:0 auto 14px;object-fit:cover;border:3px solid #fff;box-shadow:0 6px 24px rgba(184,92,116,.18)}
+h1{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:44px;line-height:1;letter-spacing:.5px}
+.tag{color:var(--muted);margin-top:8px;font-size:15px}
+.badges{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:16px}
+.badge{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:13px;font-weight:600}
+.badge b{color:var(--accent)}
+.perk{margin:18px auto 0;max-width:560px;background:linear-gradient(135deg,var(--soft),#fff);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;font-size:14px;text-align:left;display:flex;gap:12px;align-items:center}
+.perk .ic{font-size:26px}
+/* tabs */
+.tabs{position:sticky;top:0;z-index:5;background:rgba(251,247,244,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin:10px -16px 0;padding:10px 16px}
+.tabs .in{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;max-width:1080px;margin:0 auto}
+.tabs .in::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px;cursor:pointer;color:var(--ink);font-family:inherit}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+/* grid */
+h2.sec{font-family:"Cormorant Garamond",serif;font-size:30px;margin:26px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr);gap:16px}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(4,1fr)}}
+.item{background:var(--card);border-radius:var(--r);overflow:hidden;cursor:pointer;box-shadow:0 1px 0 var(--line);transition:transform .15s,box-shadow .15s;display:flex;flex-direction:column}
+.item:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(42,33,36,.08)}
+.ph{position:relative;aspect-ratio:1;background:var(--soft)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.sale{position:absolute;left:10px;top:10px;background:var(--accent);color:#fff;font-weight:700;font-size:12px;border-radius:999px;padding:4px 9px}
+.info{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.nm{font-size:14px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pr{margin-top:auto;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.pr b{font-size:17px}
+.pr s{color:var(--muted);font-size:13px}
+.buy{margin-top:6px;border:0;border-radius:12px;background:var(--soft);color:var(--accent);font-weight:700;padding:9px 0;font-family:inherit;font-size:14px;cursor:pointer}
+/* remind */
+.remind{margin:34px 0 0;background:#fff;border-radius:var(--r);padding:20px;border:1px solid var(--line);display:grid;gap:14px}
+@media(min-width:720px){.remind{grid-template-columns:1.1fr 1fr;align-items:center}}
+.remind h3{font-family:"Cormorant Garamond",serif;font-size:28px;line-height:1.1}
+.remind p{color:var(--muted);font-size:14px;margin-top:6px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+input,select,textarea{width:100%;padding:12px 13px;border-radius:12px;border:1.5px solid var(--line);font:15px Manrope,sans-serif;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+textarea{resize:vertical;min-height:64px}
+.btn{border:0;border-radius:14px;background:var(--accent);color:#fff;font-weight:700;font-size:15px;padding:14px 18px;cursor:pointer;font-family:inherit;width:100%}
+.btn.tg{background:#2a9fd8}
+.btn.ghost{background:var(--soft);color:var(--accent)}
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:30px}
+@media(min-width:720px){.why{grid-template-columns:repeat(4,1fr)}}
+.why div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;font-size:13px;color:var(--muted)}
+.why b{display:block;color:var(--ink);font-size:14px;margin-bottom:3px}
+.rev{margin-top:30px;display:grid;gap:10px}
+@media(min-width:720px){.rev{grid-template-columns:1fr 1fr}}
+.rev div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;font-size:14px}
+.rev small{color:var(--muted);display:block;margin-top:6px}
+footer{padding:34px 0 120px;text-align:center;color:var(--muted);font-size:13px}
+footer .ct{display:flex;justify-content:center;gap:10px;margin-top:10px}
+.demo{display:inline-block;margin-top:14px;font-size:11px;background:#fff3cd;color:#7a5b00;border-radius:8px;padding:4px 8px}
+/* sheet */
+.ov{position:fixed;inset:0;background:rgba(42,33,36,.45);display:none;z-index:20;align-items:flex-end;justify-content:center}
+.ov.on{display:flex}
+.sheet{background:var(--bg);width:100%;max-width:520px;max-height:92vh;overflow:auto;border-radius:24px 24px 0 0;padding:0 0 calc(16px + env(safe-area-inset-bottom))}
+@media(min-width:720px){.ov{align-items:center}.sheet{border-radius:24px}}
+.sh-ph{position:relative;aspect-ratio:4/3;background:var(--soft)}
+.sh-ph img{width:100%;height:100%;object-fit:cover}
+.x{position:absolute;right:12px;top:12px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.9);font-size:20px;cursor:pointer}
+.sh-b{padding:16px;display:grid;gap:10px}
+.sh-b h3{font-size:18px;line-height:1.3}
+.lbl{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-top:4px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:9px 12px;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;color:var(--ink)}
+.chip.on{border-color:var(--accent);background:var(--soft);color:var(--accent)}
+.tot{display:flex;justify-content:space-between;align-items:center;font-size:15px;padding-top:4px}
+.tot b{font-size:20px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 16px;border-radius:14px;font-size:14px;display:none;z-index:30;max-width:92vw;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <img class="logo" id="logo" alt="">
+    <h1 id="name"></h1>
+    <div class="tag" id="tag"></div>
+    <div class="badges" id="badges"></div>
+    <div class="perk"><span class="ic">💐</span><div id="perk"></div></div>
+  </header>
+
+  <nav class="tabs"><div class="in" id="tabs"></div></nav>
+  <main id="cats"></main>
+
+  <section class="why" id="why"></section>
+
+  <section class="remind" id="remind">
+    <div>
+      <h3>Напомним о важной дате</h3>
+      <p>Оставьте повод и дату — за 3 дня до неё флорист напишет вам и предложит букет. Больше никаких забытых дней рождения.</p>
+    </div>
+    <div style="display:grid;gap:8px">
+      <input id="rName" placeholder="Ваше имя">
+      <div class="two">
+        <select id="rWhat"><option>День рождения</option><option>Годовщина</option><option>8 Марта</option><option>14 февраля</option><option>Другое</option></select>
+        <input id="rDate" type="date">
+      </div>
+      <button class="btn ghost" onclick="remind()">Напомнить мне</button>
+    </div>
+  </section>
+
+  <section class="rev" id="rev"></section>
+
+  <footer>
+    <div id="fname"></div>
+    <div id="faddr"></div>
+    <div class="ct" id="fct"></div>
+    <div class="demo">Демо-версия витрины · заказы пока не отправляются</div>
+  </footer>
+</div>
+
+<div class="ov" id="ov" onclick="if(event.target===this)closeSheet()">
+  <div class="sheet">
+    <div class="sh-ph"><img id="sImg" alt=""><button class="x" onclick="closeSheet()">×</button></div>
+    <div class="sh-b">
+      <h3 id="sName"></h3>
+      <div class="lbl">Когда доставить</div>
+      <div class="chips" id="sDay"></div>
+      <div class="chips" id="sTime"></div>
+      <div class="lbl">Открытка (бесплатно)</div>
+      <textarea id="sCard" placeholder="Текст записки к букету, например: «С днём рождения, любимая!»"></textarea>
+      <div class="lbl">Получатель</div>
+      <input id="sAddr" placeholder="Адрес доставки">
+      <div class="two"><input id="sWho" placeholder="Имя получателя"><input id="sTel" placeholder="Телефон получателя" inputmode="tel"></div>
+      <label style="display:flex;gap:8px;align-items:center;font-size:14px;color:var(--muted)"><input type="checkbox" id="sSecret" style="width:auto"> Не говорить, от кого букет</label>
+      <div class="tot"><span>Итого с доставкой</span><b id="sTot"></b></div>
+      <div class="two">
+        <button class="btn" onclick="send('wa')">WhatsApp</button>
+        <button class="btn tg" onclick="send('tg')">Telegram</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ov" id="dv" onclick="if(event.target===this)this.classList.remove('on')">
+  <div class="sheet" style="padding:20px">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;margin-bottom:6px">Так заказ придёт флористу</h3>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:12px">Это демо-версия. В рабочей витрине клиент нажмёт «Отправить», и это сообщение сразу появится в <b id="dWhere"></b> салона.</p>
+    <pre id="dText" style="white-space:pre-wrap;font:14px/1.5 Manrope,sans-serif;background:#e7f7dc;border-radius:14px 14px 4px 14px;padding:12px 14px;margin-bottom:14px"></pre>
+    <button class="btn" onclick="document.getElementById('dv').classList.remove('on')">Понятно</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ===== Настройки витрины: меняются в одном месте =====
+const CONFIG = {
+  name: "Romantic",
+  tagline: "Авторские букеты и цветы с доставкой по Москве",
+  logo: "https://content2.flowwow-images.com/data/shop/180x180/1740871970_78733236.jpg",
+  rating: "4.4", orders: "787", since: "2025",
+  perk: "<b>Заказ напрямую у флориста</b> — без наценки маркетплейса. Пишите в WhatsApp или Telegram, ответим за 5 минут.",
+  demo: true,                        // ← пока true: заказы не отправляются, а показываются
+  whatsapp: "",                      // ← номер салона, например 79161234567
+  telegram: "",                      // ← ник салона без @
+  phone: "+7 (999) 000-00-00",
+  address: "Москва",
+  delivery: 0,                       // стоимость доставки, ₽ (0 = «уточним»)
+  hours: ["9:00–12:00","12:00–15:00","15:00–18:00","18:00–21:00"],
+  why: [["Фото перед отправкой","Пришлём фото букета до доставки"],["Свежие цветы","Собираем в день заказа"],["Открытка в подарок","Напишем ваш текст от руки"],["Доставка от 2 часов","По Москве, к точному времени"]],
+  reviews: [["Прекрасная магнолия, вживую ещё красивее, быстрая доставка, однозначно ещё вернусь к 8 марта.","Диана · Flowwow"],["Потрясающие ароматные гиацинты. Аромат и настроение весны.","Елена · Flowwow"]],
+};
+const IMG = id => "https://content2.flowwow-images.com/data/flowers/524x524/" + id.slice(-2) + "/" + id + ".jpg";
+// [фото, название, цена, старая цена]
+const CATS = [
+ ["Хиты", [
+  ["1782738082_50732874","Букет пионовидных кустовых роз с эвкалиптом",3590],
+  ["1788539009_51763720","Нежный авторский букет с дельфиниумом, французской розой и гортензией",8890],
+  ["1788779714_55236250","Букет с гортензией, пионовидной и французской розой",8864,15550],
+  ["1784053975_76327673","Ромашки в корзине",6431,6990],
+  ["1765128661_18856715","Огромная коробка радужной гипсофилы",9590],
+  ["1786005932_23945317","Гортензия — огромный букет, 9 шт",14850],
+  ["1784615677_81815216","Букет нежных роз Эквадор",12750],
+  ["1788817974_33578074","Огромная корзина французских роз",12590]]],
+ ["Монобукеты", [
+  ["1741295207_87835706","Роза Кантри Блюз, Эквадор",3990],
+  ["1782989708_84273746","Букет белоснежной эустомы",4401,4890],
+  ["1782990438_70928802","Букет роз Пинк Мондиаль",3990],
+  ["1783624427_37585912","Букет роз, 19 шт",2980],
+  ["1788593530_76046607","Букет хризантем «Зефирка»",3750],
+  ["1783007552_36203989","Роза кустовая пионовидная",5590],
+  ["1783089213_38111138","Лилии",5990],
+  ["1780479437_69972645","Кустовые розы",6153,8790]]],
+ ["Авторские", [
+  ["1783775244_90950574","Букет «Нежность»",8990],
+  ["1784634330_33307949","Роскошный букет с пионами и гортензией",9890],
+  ["1783331802_56125788","Нежный сборный букет с гортензией и диантусами",4990],
+  ["1790184208_26294924","Осенний букет с хризантемой бигуди и гортензией",7890]]],
+ ["В корзине", [
+  ["1783889330_33183516","101 роза в корзине",16990],
+  ["1777401254_27282849","Тюльпаны в корзине",17990],
+  ["1784125902_93771428","Корзина полевых ромашек",8990]]],
+ ["Коробки и сумочки", [
+  ["1780650893_23303681","101 роза в коробке",14990],
+  ["1787433648_22760766","Бархатная коробка с гортензией, эустомой и розами",11992,14990],
+  ["1776549159_48813602","Розы в коробке",12990],
+  ["1784617276_30794960","Сумочка с гортензией и розами",3850],
+  ["1782944588_37375017","Цветы в сумочке",2890],
+  ["1783332264_51446305","Сумочка с лилиями",2990]]],
+ ["Растения", [
+  ["1747840394_59192985","Орхидея белая (фаленопсис) в горшке",5985,6300],
+  ["1790184772_15270274","Луковица амариллиса в воске",2975,4250]]],
+];
+
+const $ = s => document.querySelector(s);
+const rub = n => n.toLocaleString("ru-RU") + " ₽";
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+
+$("#logo").src = CONFIG.logo; $("#name").textContent = CONFIG.name; $("#tag").textContent = CONFIG.tagline;
+$("#perk").innerHTML = CONFIG.perk;
+$("#badges").innerHTML = `<span class="badge"><b>★ ${CONFIG.rating}</b> рейтинг</span><span class="badge"><b>${CONFIG.orders}</b> заказов на Flowwow</span><span class="badge">Доставка по Москве</span>`;
+$("#why").innerHTML = CONFIG.why.map(([a,b])=>`<div><b>${a}</b>${b}</div>`).join("");
+$("#rev").innerHTML = CONFIG.reviews.map(([t,a])=>`<div>«${t}»<small>${a}</small></div>`).join("");
+$("#fname").innerHTML = `<b>${CONFIG.name}</b> · ${CONFIG.address}`;
+$("#faddr").textContent = CONFIG.phone;
+$("#fct").innerHTML = `<button class="btn" style="width:auto" onclick="chat('wa')">WhatsApp</button><button class="btn tg" style="width:auto" onclick="chat('tg')">Telegram</button>`;
+
+let ALL = [];
+$("#tabs").innerHTML = CATS.map(([c],i)=>`<button class="tab${i?'':' on'}" data-i="${i}">${c}</button>`).join("");
+$("#cats").innerHTML = CATS.map(([c,items],ci)=>`<h2 class="sec" id="c${ci}">${c}</h2><div class="grid">` + items.map(it=>{
+  const k = ALL.push(it)-1; const [id,n,p,o] = it;
+  const sale = o ? `<span class="sale">−${Math.round((1-p/o)*100)}%</span>` : "";
+  return `<article class="item" onclick="openSheet(${k})"><div class="ph"><img loading="lazy" src="${IMG(id)}" alt="${esc(n)}">${sale}</div><div class="info"><div class="nm">${esc(n)}</div><div class="pr"><b>${rub(p)}</b>${o?`<s>${rub(o)}</s>`:""}</div><button class="buy">Заказать</button></div></article>`;
+}).join("") + `</div>`).join("");
+
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on")); b.classList.add("on");
+  const el = $("#c"+b.dataset.i); window.scrollTo({top: el.getBoundingClientRect().top + scrollY - 70, behavior:"smooth"});
+});
+
+let cur = null, day = 0, slot = 0;
+function days(){
+  const d = new Date(), out = [];
+  for(let i=0;i<5;i++){ const x = new Date(d); x.setDate(d.getDate()+i);
+    out.push(i===0?"Сегодня":i===1?"Завтра":x.toLocaleDateString("ru-RU",{weekday:"short",day:"numeric",month:"short"})); }
+  return out;
+}
+function chips(el, arr, sel, cb){ el.innerHTML = arr.map((t,i)=>`<button class="chip${i===sel?' on':''}">${t}</button>`).join("");
+  [...el.children].forEach((b,i)=>b.onclick=()=>{cb(i); chips(el,arr,i,cb);}); }
+function openSheet(k){
+  cur = ALL[k]; const [id,n,p] = cur;
+  $("#sImg").src = IMG(id); $("#sName").textContent = n;
+  $("#sTot").textContent = rub(p + CONFIG.delivery) + (CONFIG.delivery ? "" : " + доставка");
+  chips($("#sDay"), days(), day, i=>day=i); chips($("#sTime"), CONFIG.hours, slot, i=>slot=i);
+  $("#ov").classList.add("on"); document.body.style.overflow="hidden";
+}
+function closeSheet(){ $("#ov").classList.remove("on"); document.body.style.overflow=""; }
+function link(kind, text){
+  return kind==="wa" ? `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`
+                     : `https://t.me/${CONFIG.telegram}?text=${encodeURIComponent(text)}`;
+}
+function send(kind){
+  const [,n,p] = cur;
+  const lines = [`Здравствуйте! Хочу заказать букет:`, `💐 ${n} — ${rub(p)}`, `📅 ${days()[day]}, ${CONFIG.hours[slot]}`];
+  if($("#sAddr").value) lines.push(`📍 ${$("#sAddr").value}`);
+  if($("#sWho").value || $("#sTel").value) lines.push(`👤 ${$("#sWho").value} ${$("#sTel").value}`.trim());
+  if($("#sCard").value) lines.push(`✉️ Открытка: «${$("#sCard").value}»`);
+  if($("#sSecret").checked) lines.push(`🤫 Не говорить, от кого`);
+  go(kind, lines.join("\n"));
+}
+function go(kind, text){
+  if(CONFIG.demo || !(kind==="wa" ? CONFIG.whatsapp : CONFIG.telegram)){
+    $("#dText").textContent = text; $("#dWhere").textContent = kind==="wa" ? "WhatsApp" : "Telegram";
+    $("#dv").classList.add("on"); return;
+  }
+  window.open(link(kind, text), "_blank");
+}
+function chat(kind){ go(kind, "Здравствуйте! Хочу заказать букет."); }
+function remind(){
+  const n = $("#rName").value.trim(), w = $("#rWhat").value, d = $("#rDate").value;
+  if(!d){ toast("Выберите дату"); return; }
+  const dt = new Date(d).toLocaleDateString("ru-RU",{day:"numeric",month:"long"});
+  go("wa", `Здравствуйте! Напомните мне, пожалуйста, о дате: ${w} — ${dt}.${n?" Меня зовут "+n+".":""}`);
+}
+function toast(t){ const el=$("#toast"); el.textContent=t; el.style.display="block"; setTimeout(()=>el.style.display="none",2200); }
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeSheet(); });
+</script>
+</body>
+</html>
